@@ -1,0 +1,76 @@
+name: Mettre à jour le profil
+
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - README.md
+      - .github/workflows/update-profile.yml
+      - .github/scripts/update_readme.py
+      - .gitattributes
+
+permissions:
+  contents: read
+
+concurrency:
+  group: update-profile-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update-profile:
+    if: github.event.repository.private == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v6
+
+      - name: Générer les statistiques publiques
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_rank=true&locale=fr&bg_color=101729&title_color=B9A8FF&text_color=D7DEF4&icon_color=78E2D0&hide_border=true
+          path: assets/generated/stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+
+      - name: Générer les langages des dépôts publics
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&locale=fr&bg_color=101729&title_color=B9A8FF&text_color=D7DEF4&icon_color=78E2D0&hide_border=true
+          path: assets/generated/languages.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: "true"
+
+      - name: Générer l’animation des contributions
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: |
+            assets/generated/snake.svg?color_snake=#b5a0ff
+            assets/generated/snake-dark.svg?palette=github-dark&color_snake=#78e2d0
+
+      # Si une génération échoue, les étapes suivantes sont ignorées :
+      # les dernières images publiées restent dans le dépôt sans modification.
+      - name: Vérifier les images et activer les liens locaux
+        run: python3 .github/scripts/update_readme.py
+
+      - name: Enregistrer uniquement les changements du profil
+        env:
+          PROFILE_BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- README.md assets/generated/stats.svg assets/generated/languages.svg assets/generated/snake.svg assets/generated/snake-dark.svg
+          if git diff --cached --quiet; then
+            echo "Le profil est déjà à jour."
+            exit 0
+          fi
+          git commit -m "chore: update profile cards"
+          git push origin HEAD:"$PROFILE_BRANCH"
