@@ -77,10 +77,10 @@ Préciser « équipes » ou « projets » après confirmation de ce que représe
 
 <p align="center">
   <a href="https://github.com/Kyllianlam?tab=overview">
-    <img src="https://github-stats-extended.vercel.app/api?username=Kyllianlam&amp;show_icons=true&amp;hide_rank=true&amp;locale=fr&amp;hide_border=true&amp;bg_color=101729&amp;title_color=B9A8FF&amp;text_color=D7DEF4&amp;icon_color=78E2D0&amp;card_width=440" alt="Statistiques GitHub publiques de Kyllianlam : étoiles, commits et contributions" width="400">
+    <img src="assets/generated/stats.svg" alt="Statistiques GitHub publiques de Kyllianlam : étoiles, commits et contributions" width="400">
   </a>
   <a href="https://github.com/Kyllianlam?tab=repositories">
-    <img src="https://github-stats-extended.vercel.app/api/top-langs?username=Kyllianlam&amp;layout=compact&amp;langs_count=6&amp;locale=fr&amp;hide_border=true&amp;bg_color=101729&amp;title_color=B9A8FF&amp;text_color=D7DEF4&amp;card_width=440" alt="Langages détectés dans mes dépôts publics — données disponibles selon les dépôts analysables" width="400">
+    <img src="assets/generated/languages.svg" alt="Langages détectés dans mes dépôts publics — données disponibles selon les dépôts analysables" width="400">
   </a>
 </p>
 
@@ -93,6 +93,10 @@ Préciser « équipes » ou « projets » après confirmation de ce que représe
 <sub>Les cartes utilisent les données accessibles publiquement. La répartition des langages apparaît lorsque le service détecte du code dans les dépôts analysables.</sub>
 
 <!-- SNAKE:START -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/generated/snake-dark.svg">
+  <img alt="Animation de mon calendrier de contributions GitHub" src="assets/generated/snake.svg">
+</picture>
 <!-- SNAKE:END -->
 
 ## Technologies sur mes projets
