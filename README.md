@@ -9,6 +9,9 @@
   <a href="https://www.linkedin.com/in/kyllian-lamirand-0084a5277/">
     <img src="https://img.shields.io/badge/LinkedIn-%C3%89changeons-78E2D0?style=for-the-badge&amp;labelColor=101729" alt="Me contacter sur LinkedIn">
   </a>
+  <a href="assets/CV-Kyllian-Lamirand.pdf">
+    <img src="https://img.shields.io/badge/CV-PDF_(EN)-D7DEF4?style=for-the-badge&amp;labelColor=101729" alt="Consulter mon CV en anglais (PDF)">
+  </a>
   <a href="#cv-et-parcours">
     <img src="https://img.shields.io/badge/Stage-2_%C3%A0_3_mois-B9A8FF?style=for-the-badge&amp;labelColor=101729" alt="Recherche de stage de 2 à 3 mois">
   </a>
@@ -25,11 +28,7 @@
 > **Je recherche un stage de 2 à 3 mois dans le cadre de ma 1ʳᵉ année.**  
 > Pour échanger : [retrouvez-moi sur LinkedIn](https://www.linkedin.com/in/kyllian-lamirand-0084a5277/).
 
-[Projets](#projets) · [Hackathons](#hackathons) · [Activité GitHub](#activit%C3%A9-github) · [CV et parcours](#cv-et-parcours) · [Contact](#contact)
-
-<!-- Quand le CV est prêt, ajouter assets/CV-Kyllian-Lamirand.pdf, puis insérer ici :
-[Consulter mon CV en anglais](assets/CV-Kyllian-Lamirand.pdf)
--->
+[Projets](#projets) · [Hackathons](#hackathons) · [Activité GitHub](#activit%C3%A9-github) · [CV et parcours](#cv-et-parcours) · [Contact](#contact) · **[📄 CV (PDF)](assets/CV-Kyllian-Lamirand.pdf)**
 
 ## Projets
 
@@ -114,14 +113,13 @@ Les projets ci-dessus donnent un aperçu concret de mon travail et de ma progres
 
 ## CV et parcours
 
-Je recherche un **stage de 1ʳᵉ année de 2 à 3 mois**. Une nouvelle version de mon CV en anglais sera ajoutée ici prochainement.
+Je recherche un **stage de 1ʳᵉ année de 2 à 3 mois**.
+
+**[📄 Consulter mon CV en anglais · PDF](assets/CV-Kyllian-Lamirand.pdf)**
 
 [Voir mon parcours sur LinkedIn](https://www.linkedin.com/in/kyllian-lamirand-0084a5277/)
 
-<!-- Une fois le PDF ajouté, remplacer la phrase sur le futur CV par :
-[Consulter mon CV en anglais · PDF](assets/CV-Kyllian-Lamirand.pdf)
-Ajouter ensuite l’école, le domaine de stage et les dates de disponibilité.
--->
+<!-- Ajouter ensuite l’école, le domaine de stage et les dates de disponibilité. -->
 
 ## Contact
 
