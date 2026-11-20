@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Statistiques GitHub de Kyllianlam, Rank: C</title>
-        <desc id="descId">Total d&#39;&#233;toiles: 0, Total des Commits  (L&#39;ann&#233;e derni&#232;re) : 11, Total des PRs: 0, Nombre total d&#39;incidents: 0, Contribu&#233; &#224; (l&#39;ann&#233;e derni&#232;re): 0</desc>
+        <desc id="descId">Total d&#39;&#233;toiles: 0, Total des Commits  (L&#39;ann&#233;e derni&#232;re) : 11, Total des PRs: 1, Nombre total d&#39;incidents: 0, Contribu&#233; &#224; (l&#39;ann&#233;e derni&#232;re): 0</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 248.16518418224288;
+        stroke-dashoffset: 247.30015949377366;
       }
     }
   
@@ -188,7 +188,7 @@
         x="274.01"
         y="12.5"
         data-testid="prs"
-      >0</text>
+      >1</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
